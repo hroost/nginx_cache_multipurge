@@ -3,8 +3,6 @@
 --  Author: Diego Blanco <diego.blanco@treitos.com>
 -- Version: 0.1
 
-local md5 = require 'md5'
-
 --------------------------------------------------------------------------------
 ---------------------------------- globals -------------------------------------
 --------------------------------------------------------------------------------
@@ -72,7 +70,7 @@ end
 
 -------------------------------------------------------- purge specific entry --
 function purge_one()
-  local cache_key_md5 = md5.sumhexa( cmp_cache_key )
+  local cache_key_md5 = ngx.md5( cmp_cache_key )
   os.execute( "find '"..cmp_cache_path.."' -name '"..cache_key_md5.."' -type f -exec rm {} + -quit" )
 end
 

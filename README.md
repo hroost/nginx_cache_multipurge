@@ -8,14 +8,16 @@ Handle **cache purges** in a versatile and easy way. This *lua module* will allo
 ## Requirements
 
  * Nginx Lua Module
- * MD5 Lua Library
+ * MD5 Lua Library lua-md5 (not necessary)
  
  If you are on Debian/Ubuntu
  
  ```
- apt install libnginx-mod-http-lua lua-md5
+ apt install libnginx-mod-http-lua
  ```
  
+ If you are using [openresty](http://openresty.org) all dependencies are already satisfied.
+
 ## Installation
  
 * Install the above requirements
